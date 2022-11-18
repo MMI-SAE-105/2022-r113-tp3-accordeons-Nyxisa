@@ -12,16 +12,16 @@
       <h1>Accordéon avec des booléens</h1>
       <div class="accordeon">
         <section x-data="{isOpen:false}">
-          <button>Bouton 1</button>
-          <p x-show="isOpen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, eos. Nam amet est sapiente hic corporis itaque repellat quos culpa voluptate reiciendis earum, maiores laborum laudantium ipsa impedit tempore suscipit?</p>
+          <button @click="isOpen = ! isOpen">Bouton 1</button>
+          <p x-show="isOpen" x-transition.duration.500ms>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, eos. Nam amet est sapiente hic corporis itaque repellat quos culpa voluptate reiciendis earum, maiores laborum laudantium ipsa impedit tempore suscipit?</p>
         </section>
         <section x-data="{isOpen:false}">
-          <button>Bouton 2</button>
-          <p x-show="isOpen">In repudiandae eveniet id animi quae odio totam accusantium similique veniam asperiores nisi debitis dicta porro itaque unde quod molestiae repellat, ipsum modi ad? Expedita voluptatibus facilis ut quod? Impedit!</p>
+          <button @click="isOpen = ! isOpen">Bouton 2</button>
+          <p x-show="isOpen" x-transition.duration.500ms>In repudiandae eveniet id animi quae odio totam accusantium similique veniam asperiores nisi debitis dicta porro itaque unde quod molestiae repellat, ipsum modi ad? Expedita voluptatibus facilis ut quod? Impedit!</p>
         </section>
         <section x-data="{isOpen:false}">
-          <button>Bouton 3</button>
-          <p x-show="isOpen">Ducimus sequi autem delectus. Esse cupiditate non nisi libero maiores ut odit pariatur in fuga nemo veniam incidunt, aliquid illo! Consectetur odit velit et quam sunt? Soluta illo minus id.</p>
+          <button @click="isOpen = ! isOpen">Bouton 3</button>
+          <p x-show="isOpen" x-transition.duration.500ms>Ducimus sequi autem delectus. Esse cupiditate non nisi libero maiores ut odit pariatur in fuga nemo veniam incidunt, aliquid illo! Consectetur odit velit et quam sunt? Soluta illo minus id.</p>
         </section>
       </div>
     </div>
