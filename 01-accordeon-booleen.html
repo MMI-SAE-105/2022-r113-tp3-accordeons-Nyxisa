@@ -9,22 +9,22 @@
   </head>
   <body>
     <header>
-    <h1>Accordéon avec des booléens</h1>
-    <div class="accordeon">
-      <section>
-        <button>bouton 1</button>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus recusandae eos fugiat sint, fugit corrupti odit numquam quo aperiam totam, exercitationem mollitia. Blanditiis impedit odio quia voluptate reprehenderit odit architecto.</p>
-      </section>
-      <section>
-        <button>bouton 2</button>
-        <p>A qui reprehenderit, pariatur explicabo quam, minus dolores fugiat, culpa beatae quas aliquid laborum. Praesentium tenetur quo consectetur, tempora, numquam, repudiandae asperiores doloribus quas rerum quis deserunt odit debitis sapiente.</p>
-      </section>
-      <section>
-        <button>bouton 3</button>
-        <p>Corporis dignissimos eum ullam error. Nam officiis ea ipsam? Laboriosam iusto id, dolorum repudiandae similique commodi recusandae sapiente quae, voluptate architecto nemo obcaecati magni esse corrupti voluptates suscipit dolores quos?</p>
-      </section>
+      <h1>Accordéon avec des booléens</h1>
+      <div class="accordeon">
+        <section x-data="{isOpen:false}">
+          <button>Bouton 1</button>
+          <p x-show="isOpen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, eos. Nam amet est sapiente hic corporis itaque repellat quos culpa voluptate reiciendis earum, maiores laborum laudantium ipsa impedit tempore suscipit?</p>
+        </section>
+        <section x-data="{isOpen:false}">
+          <button>Bouton 2</button>
+          <p x-show="isOpen">In repudiandae eveniet id animi quae odio totam accusantium similique veniam asperiores nisi debitis dicta porro itaque unde quod molestiae repellat, ipsum modi ad? Expedita voluptatibus facilis ut quod? Impedit!</p>
+        </section>
+        <section x-data="{isOpen:false}">
+          <button>Bouton 3</button>
+          <p x-show="isOpen">Ducimus sequi autem delectus. Esse cupiditate non nisi libero maiores ut odit pariatur in fuga nemo veniam incidunt, aliquid illo! Consectetur odit velit et quam sunt? Soluta illo minus id.</p>
+        </section>
+      </div>
     </div>
-      </section>
     </header>
   </body>
 </html>
