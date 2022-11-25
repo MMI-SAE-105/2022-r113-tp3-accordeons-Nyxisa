@@ -19,7 +19,7 @@
     #onglets li {
       padding: 0.5em;
       border: 2px solid rgb(0, 0, 0);
-      border-bottom: none;
+      border-bottom: 3px solid rgb(0, 0, 0);
       background-color: rgb(194, 190, 245);
       cursor: pointer;
       border-top-left-radius: 10px;
@@ -29,11 +29,11 @@
     }
 
     #onglets li.actif {
-      background-color: #F00;
+      background-color: rgb(178, 239, 229);
     }
+    
   </style>
 </head>
-
 <body>
   <h1>Onglets</h1>
   <div id="onglets" x-data="{ ouvert :1,}">
@@ -54,7 +54,6 @@
         Onglet 3
       </li>
     </ul>
-
     <div>
       <div role="tabpanel" x-show="ouvert === 1">
         <h1>Panneau 1</h1>
@@ -77,5 +76,4 @@
     </div>
   </div>
 </body>
-
 </html>
