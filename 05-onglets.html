@@ -1,53 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Onglets</title>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <style>
-      #onglets ul {
-        margin: 0px;
-        padding: 0px;
-        list-style-type: none;
-        display: flex;
-        gap: 1em;
-      }
-      #onglets li {
-        padding: 0.5em;
-        border: 1px solid gray;
-        border-bottom: none;
-        background-color: rgb(255, 254, 248);
-        cursor: pointer;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        opacity:100;
-        transition: opacity
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onglets</title>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    #onglets ul {
+      margin: 0px;
+      padding: 0px;
+      list-style-type: none;
+      display: flex;
+      gap: 1em;
+    }
+    #onglets li {
+      padding: 0.5em;
+      border: 2px solid rgb(0, 0, 0);
+      border-bottom: none;
+      background-color: rgb(194, 190, 245);
+      cursor: pointer;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      opacity:100;
+      transition: opacity
 
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Onglets</h1>
-    <div id="onglets" x-data="{ ouvert :1,}"> 
-      <ul role="tablist">
-        <li role="tab" :class="{
-          'actif':ouvert === 1,
-        }" @click="ouvert = 1">
-        Onglet 1
-        </li>
-        <li role="tab" :class="{
-          'actif':ouvert === 2,
-        }" @click="ouvert = 2">
-          Onglet 2
-        </li>
-        <li role="tab" :class="{
-          'actif':ouvert === 3,
-        }" @click="ouvert = 3">
-        Onglet 3
-        </li>
-      </ul>
-    </div> 
-  </body>
+    }
+  </style>
+</head>
+<body>
+  <h1>Onglets</h1>
+  <div id="onglets" x-data="{ ouvert :1,}"> 
+    <ul role="tablist">
+      <li role="tab" :class="{
+        'actif':ouvert === 1,
+      }" @click="ouvert = 1">
+      Onglet 1
+      </li>
+      <li role="tab" :class="{
+        'actif':ouvert === 2,
+      }" @click="ouvert = 2">
+        Onglet 2
+      </li>
+      <li role="tab" :class="{
+        'actif':ouvert === 3,
+      }" @click="ouvert = 3">
+      Onglet 3
+      </li>
+    </ul>
+  </div> 
+  <div>
+    <div role="tabpanel" x-show="ouvert === 1">
+      <h1>Panneau 1</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat labore nisi possimus id? Sit dolore necessitatibus eius adipisci quidem dolor repellendus impedit eum. Nesciunt facere quibusdam fugit explicabo, aliquid possimus!</p>
+    </div>
+    <div role="tabpanel" x-show="ouvert === 2">
+      <h1>Panneau 2</h1>
+      <p>Inventore necessitatibus iusto earum error facere voluptate, laboriosam alias, est sed nemo recusandae iure. Perspiciatis nobis molestias voluptatem sed deserunt, dolores officia aut, fugit enim, excepturi quisquam qui blanditiis quae.</p>
+    </div>
+    <div role="tabpanel" x-show="ouvert === 3">
+      <h1>Panneau 3</h1>
+      <p>Blanditiis quam rerum quas velit? Ad quasi fugit laborum, eveniet deleniti minus aspernatur debitis cupiditate, distinctio molestiae reiciendis eos quam voluptate explicabo dicta sapiente earum exercitationem natus, fuga omnis quod?</p>
+    </div>
+  </div>
+</body>
 </html>
